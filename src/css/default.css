@@ -1,0 +1,17 @@
+/* 细节样式 */
+#app {font-family: 'Avenir', Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+/* a {color: #42b983;} */
+* { font-family: 'Microsoft YaHei'; margin:0;padding:0;box-sizing:border-box;}
+html,body {height: 100%;}
+body {  font-size: 12px;min-width: 1200px;min-height: 100%;background: #f6f6f6;}
+h1, h2, h3 { margin: 0; }
+h2 { font-size: 1.6em; /* margin:20px 0; */}
+h3 {color: #7f7f7f;font-size: 1.4em;}
+ul {list-style-type:none;margin: 0;padding:0;}
+ul li{list-style: none;}
+.bg_gray{background: #f3f3f4}
+a { text-decoration: none;color: #595959; cursor: pointer;}
+a:hover { text-decoration: none;color:#000; }
+a:focus { outline: none;text-decoration: none;/* color: #2a92d9; */ }
+.m-t{margin-top: 20px;}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>hello,paopao</title>
+ <link rel="stylesheet" href="src/css/font-awesome.css">
+ <link rel="stylesheet" href="src/css/bootstrap.min.css">
+ <link rel="stylesheet" href="src/css/animate.css">
+ <link rel="stylesheet" href="src/css/style.css">
+ <link rel="stylesheet" href="src/css/default.css">
+<link rel="stylesheet" href="src/css/ele.css">
+</head>
+<body>
+ <div id="app">
+    <div class="header">
+        <div class="header_t ">
+            商城首页
+        </div>
+        <div class="header_b">采购中心</div>
+    </div>
+    <div class="buy_body">
+        <div class="l_menu" id="l_menu_tog">
+            <router-link to='/App' tag='h3'><a ><i class="glyphicon glyphicon-home "></i>采购商中心</a></router-link>
+            <a class="li_fa" @click="toggle()"><i class="fa fa-hourglass-1 "></i>交易中心</a>
+            <div :class={child_noseen:!seen}>
+                <transition name="fade">
+                    <ul> 
+                        <router-link to='/uiEle' tag='li'><a href="/uiEle"><i class="fa fa-heart"></i>UI-element</a></router-link>
+                        <router-link to='/cart' tag='li'><a href="/cart"><i class="fa fa-heart"></i>进货单</a></router-link>
+                        <router-link to='/orderManage' tag='li'><a href="/orderManage"><i class="fa fa-heart"></i>订单管理</a></router-link>
+                        <router-link to='/change' tag='li'><a href="/change"><i class="fa fa-heart"></i>退换货</a></router-link>
+                        <router-link to='/orderCheck' tag='li'><a href="/orderCheck"><i class="fa fa-heart"></i>订单审核</a></router-link>
+                        <router-link to='/record' tag='li'><a href="/record"><i class="fa fa-heart"></i>比价记录</a></router-link>
+                        <router-link to='/inquiry' tag='li'><a href="/inquiry"><i class="fa fa-heart"></i>询价管理</a></router-link>
+                        <router-link to='/judge' tag='li'><a href="/judge"><i class="fa fa-heart"></i>评价管理</a></router-link> 
+                    </ul>
+                </transition>
+            </div>
+            <div >
+                <a class="li_fa" @click="toggle2()"><i class="fa fa-hourglass-1 "></i>用户管理</a>
+                <transition name="fade">
+                    <ul v-show="seen2"> 
+                        <router-link to='/cart' tag='li'><a href="/cart"><i class="fa fa-heart"></i>进货单</a></router-link>
+                        <router-link to='/orderManage' tag='li'><a href="/orderManage"><i class="fa fa-heart"></i>订单管理</a></router-link>
+                        <router-link to='/change' tag='li'><a href="/change"><i class="fa fa-heart"></i>退换货</a></router-link>
+                        <router-link to='/orderCheck' tag='li'><a href="/orderCheck"><i class="fa fa-heart"></i>订单审核</a></router-link>
+                        <router-link to='/record' tag='li'><a href="/record"><i class="fa fa-heart"></i>比价记录</a></router-link>
+                        <router-link to='/inquiry' tag='li'><a href="/inquiry"><i class="fa fa-heart"></i>询价管理</a></router-link>
+                        <router-link to='/judge' tag='li'><a href="/judge"><i class="fa fa-heart"></i>评价管理</a></router-link> 
+                    </ul>
+                </transition>
+            </div>
+        </div>
+
+        <div class="r_page animated fadeInUp">
+            <router-view></router-view>
+        </div>
+    </div>
+ </div>
+ <style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 0.1s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+      opacity: 0;
+    }
+
+    .child_noseen ul{
+        display: none;
+    }
+
+ </style>
+ <script src="/dist/build.js"></script>
+ <!-- <script src="/src/js/ele.js"></script> -->
+</html>

@@ -1,0 +1,24 @@
+.buy-con{width:100%;height:100%}
+.header{height:100px;line-height:50px;text-align:center}
+.header .header_t{height:50px;line-height:50px;background:#f6f6f6}
+.header .header_b{height:50px;line-height:50px;background:#d61f1f;color:#fff}
+.buy_body{width:1200px;margin:20px auto}
+.l_menu{float:left;width:175px;height:600px;border:1px solid red;margin-right:20px;border:1px solid #ddd;background:#fff}
+.l_menu h3{margin:10px;text-align:center}
+.l_menu h3 .glyphicon-home{margin-right:5px;background:#d61f1f;color:#fff;width:30px;height:30px;border-radius:15px;line-height:30px;text-align:center}
+.l_menu .li_fa{padding-left:15px;font-size:14px;line-height:30px}
+.l_menu .li_fa .fa{font-size:14px}
+.l_menu ul li{width:100%}
+.l_menu ul li a{display:inline-block;width:100%;height:25px;line-height:25px;padding:0 30px}
+.l_menu ul li a:focus,.l_menu ul li a:hover{background:#d61f1f;color:#fff}
+.l_menu .fa{color:#d61f1f;font-size:12px;margin-right:5px}
+.r_page{width:1000px;float:left;border:1px solid #ddd;background:#fff}
+.r_page .r_cont{padding:20px}
+.r_page .r_cont .vue_tit{border-bottom:1px solid #ddd;width:100%;padding-bottom:20px}
+.contain_r{width:1000px;padding:20px;box-sizing:border-box}
+.ibox{clear:both;margin-bottom:25px;margin-top:0;padding:0;border:1px solid #ddd}
+.ibox-title{-moz-border-bottom-color:none;-moz-border-left-color:none;-moz-border-right-colors:none;-moz-border-top-colors:none;background-color:#fff;border-color:#e7eaec;-webkit-border-image:none;-o-border-image:none;border-image:none;border-style:solid solid none;border-width:4px 0 0;color:inherit;margin-bottom:0;padding:14px 15px 7px;min-height:48px}
+.ibox-content{background-color:#fff;color:inherit;padding:15px 20px 20px;border-color:#e7eaec;-webkit-border-image:none;-o-border-image:none;border-image:none;border-style:solid solid none;border-width:1px 0}
+.ibox-tools{display:inline-block;float:right;margin-top:-30px;position:relative;padding:0}
+.ibox-tools a{cursor:pointer;margin-left:5px;color:#c4c4c4}
+.border{border:1px solid #ddd}
