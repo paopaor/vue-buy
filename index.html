@@ -20,12 +20,13 @@
     </div>
     <div class="buy_body">
         <div class="l_menu" id="l_menu_tog">
-            <router-link to='/App' tag='h3'><a ><i class="glyphicon glyphicon-home "></i>采购商中心</a></router-link>
+            <router-link to='/purCenter' tag='h3'><a ><i class="glyphicon glyphicon-home "></i>采购商中心</a></router-link>
             <a class="li_fa" @click="toggle()"><i class="fa fa-hourglass-1 "></i>交易中心</a>
             <div :class={child_noseen:!seen}>
                 <transition name="fade">
                     <ul> 
                         <router-link to='/uiEle' tag='li'><a href="/uiEle"><i class="fa fa-heart"></i>UI-element</a></router-link>
+                        <router-link to='/user' tag='li'><a href="/user"><i class="fa fa-heart"></i>用户管理</a></router-link>
                         <router-link to='/cart' tag='li'><a href="/cart"><i class="fa fa-heart"></i>进货单</a></router-link>
                         <router-link to='/orderManage' tag='li'><a href="/orderManage"><i class="fa fa-heart"></i>订单管理</a></router-link>
                         <router-link to='/change' tag='li'><a href="/change"><i class="fa fa-heart"></i>退换货</a></router-link>

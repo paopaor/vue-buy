@@ -29,6 +29,7 @@
        </el-table>
  </div>
 </template>
+
 <script>
  export default{
      data(){
@@ -38,7 +39,7 @@
              };
 
         },
-          /*this.$http.get('../data/pao-table1.json').then(function(response){
+          /*this.$http.get('http://www.syxsoa.com:8080/api/org/member/list').then(function(response){
                   this.tableData=response.data;
                   console.log(response);
               })*/
@@ -50,10 +51,14 @@
               console.log(error);
             });*/
 
-            mounted() {
-                axios.get('./data/pao-table1.json')
-                .then(response => {this.tableData = response.data})
-              },
+        mounted() {
+            this.$http.get('/src/data/pao-table1.json')
+            .then(response => {
+            	this.tableData = response.data;
+            	console.log(response);
+              console.log(123);
+            })
+          },
         methods:{
         	formatter(row, column) {
         	        return row.address;
@@ -63,4 +68,5 @@
           }
         }
  }
+ 
 </script>
