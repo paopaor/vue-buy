@@ -23,6 +23,7 @@ import record from './components/record.vue';
 import inquiry from './components/inquiry.vue';
 import judge from './components/judge.vue';
 import user from './components/user.vue';
+
 //定义路由
 const routes = [
  { path: '/',component:App},
@@ -37,10 +38,15 @@ const routes = [
  { path: '/judge', component: judge },
  { path: '/user', component: user }
  ]
-
-//创建 router 实例，然后传 routes 配置
 const router=new VueRouter({
 routes
+});
+
+//创建axios实例
+var instance = axios.create({
+  baseURL: 'http://www.syxsoa.com:9600/service/org/user/',
+  timeout: 1000,
+  headers: {'X-Custom-Header': 'foobar'}
 });
 
 /*new Vue({
@@ -71,14 +77,27 @@ methods:{
 		this.seen2 = this.seen2? false : true;
 	}
 },
-router
+router,
+axios
 });
-
-/*axios.get('http://www.syxsoa.com:8080/api/org/member/list')
-.then(response => {
-	this.tableData = response.data;
-	console.log(response);
-})*/
+export default {
+  // 用户注册
+  userRegister(data) {
+    return instance.post('/api/register', data)
+  },
+  // 用户登录
+  UserLogin(data) {
+    return instance.post('/api/login', data)
+  },
+  // 获取用户
+  getUser() {
+    return instance.get('/api/user')
+  },
+  // 删除用户
+  delUser(data) {
+    return instance.post('/api/delUser', data)
+  }
+}
 /*this.$http({
         method: 'GET',
         url: ''

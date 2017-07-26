@@ -14,7 +14,6 @@
                 type="password" 
                 class="form-control" 
                 placeholder="请输入密码" 
-                v-model="pwd"
                 >
             </div>
         </div>
@@ -42,7 +41,6 @@
                 <tr>
                   <th class="text-center">序号</th>
                   <th class="text-center">用户名</th>
-                  <th class="text-center">密码</th>
                   <th class="text-center">邮箱</th>
                   <th class="text-center">创建时间</th>
                   <th class="text-center">更新时间</th>
@@ -53,7 +51,6 @@
                 <tr v-for="(item,index) in myData" class="text-center">
                     <td>{{index+1}}</td>
                     <td>{{item.name}}</td>
-                    <td>{{item.pwd}}</td>
                     <td>{{item.mail}}</td>
                     <td>{{item.creat_time}}</td>
                     <td>{{item.update_time}}</td>
@@ -95,18 +92,17 @@
             console.log(response);
             console.log(response.data);
         })
+        
       },
     methods:{
         add(ev){
                 this.myData.push({
                     name:this.username,
-                    pwd:this.pwd,
                     mail:this.mail,
                     s_time:new Date(),
                     u_time:new Date()
                 });
                 this.username='',
-                this.pwd='',
                 this.mail=''
 
             },
